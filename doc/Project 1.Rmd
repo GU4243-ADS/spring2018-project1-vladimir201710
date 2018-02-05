@@ -3,8 +3,8 @@ title: "Some Simple SPOOKY Data Analysis"
 author: "Huijun Cui"
 date: "January 31, 2018"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 I. Prerequisite
 1. Setup the libraries
@@ -726,7 +726,7 @@ ggraph(bigram_graphmws, layout = "fr") +
 ```
 Here are the graphs show the most popular bigrams htroughout the dataset, and the contribution from different authors. Arrows represent the inner directions of bigrams. 
 The first graph discribes the total dataset, the second one is for EAP, the third one is for HPL. the forth one is for MWS.
-From the comparison, we can see EAP uses the most fixed bigrams, while MWS uses the least. But this may also because the discrepancies between total quantities of words from different authors. Besides, EAP mentions more daily supplies, HPL mentions more locations,  while MWS mentions more nouns about a country. 
+From the comparison, we can see EAP uses the most fixed bigrams, while MWS uses the least. But this may also because the discrepancies between total quantities of words from different authors. Besides, EAP mentions more daily supplies, HPL mentions more locations,  while MWS mentions more nouns about a country. We can induce that MWS concnetrates on kingdoms (also is a sign of her era), HPL likes to talk about location and nature, while EAP writes stories occuring indoors.
 
 8. Topic Models
 We use the `topicmodels` package for this analysis.  Since the `topicmodels` package doesn't use the `tidytext` framework, we first convert our `spooky_wrd` dataframe into a document term matrix (DTM) matrix using `tidytext` tools.
